@@ -1,5 +1,2 @@
-mam
-what
-do
-you
-do
+mam what 
+do you do 

@@ -16,19 +16,44 @@ namespace line
 
             string[] s = new string[intReadFile(inFile)+1];
             ReadFile(inFile, s);
-            
+            int l = 0;
             int N = int.Parse(s[0]);
-            WriteFile(outFile, s[1]);
+            string xstr = null;
+            string[] nStr = s[1].Split(' ');
+            for (int i = 0; i < nStr.Length; i++)
+            {
+                if (l + nStr[i].Length + 1 < N)
+                {
+                    xstr += nStr[i]+ " ";
+                    l += nStr[i].Length; 
+                }
+                else
+                    if (l + nStr[i].Length == N)
+                    {
+                        xstr += nStr[i] + "\n";
+                        l = 0;
+                    }
+                    else
+                    {
+                        xstr += "\n" + nStr[i]+ " ";
+                        l = 0;
+                    }
+            }
+
+            WriteFile(outFile, xstr);
         }
 
         static void WriteFile(string filename, string str)
         {
             using (StreamWriter writer = File.CreateText(filename))
             {
-                string[] nStr = str.Split(' ');
-                for(int i = 0; i < nStr.Length; i++)
+                
+                for(int i = 0; i < str.Length; i++)
                 {
-                    writer.WriteLine(nStr[i]);
+                    if (str[i] == '\n')
+                        writer.WriteLine();
+                    else
+                        writer.Write(str[i]);
                 }
             }          
         }
