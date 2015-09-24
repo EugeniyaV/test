@@ -1,0 +1,6 @@
+D:\J\DNUZT\coursesC#\line\line\bin\Debug\line.exe.config
+D:\J\DNUZT\coursesC#\line\line\bin\Debug\line.exe
+D:\J\DNUZT\coursesC#\line\line\bin\Debug\line.pdb
+D:\J\DNUZT\coursesC#\line\line\obj\Debug\line.csprojResolveAssemblyReference.cache
+D:\J\DNUZT\coursesC#\line\line\obj\Debug\line.exe
+D:\J\DNUZT\coursesC#\line\line\obj\Debug\line.pdb
